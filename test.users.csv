@@ -1,0 +1,7 @@
+_id,picture,name,email,phone,username,password,confirmpassword,Isuse,role
+654219646cb57b4a0dd15348,male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.webp,1,1,1,1,$2b$10$KtqT2XfVFB0EuH/nmEW6FOJFie28wNuWuo4uyo6vZUdtZa8jLDC.u,1,1,User
+65421ff39c271182941682a5,80101335.jpg,8,8,8,8,$2b$10$nZ95DHZqwQqAyXB/4Kjn7.j2l17qazIEP/pewF/GfTKQL7f3TQxvu,8,1,User
+65446539fbd34b0e50f16108,Administrator.png,Tanapon Rattanamano,tanapon@gmail.com,0123456789,tanapon,$2b$10$3R0mCE3.jNTTO0DyVBysWOBZkLViCmuh7h/LBfARWw9bRgtjhzCLi,123,1,Admin
+65446cb4703bdc7bfaaa1339,male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.webp,55,55,55,55,$2b$10$EquZdkUz4S0JiDQayJ8tbeK5ZD1Q.VWvuuzH29gj0mfh/kvdCFXaq,55,1,Admin
+65645c84d68ba046a929e99b,icon-256x256-removebg-preview.png,long,long,long,long,$2b$10$0Wc1NWbvN5THBzxz/68O4OKl0krlxY37GWyjkffNd4PPDaGdUHtoK,123,1,Admin
+656845f90e37756a7f5cc0a8,images.jpg,555,555,555,555,$2b$10$hQrOojc28CdEGVLqysPvle/H0hcwKadDCsCmvGTsL1.xrxaN.08Ky,555,1,Admin

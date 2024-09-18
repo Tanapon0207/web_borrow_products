@@ -1,0 +1,749 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a>หน้าหลัก</a></li>
+            <li class="breadcrumb-item active">ยืม / คืน</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+
+
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-4">
+          <!-- small box -->
+          <div class="small-box bg-info">
+            <div class="inner">
+              <p>จำนวนบิลที่ยืมสำเร็จ</p>
+              <h2>{{bill_amount}} บิล</h2>
+
+            </div>
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16">
+                <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27m.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0z"/>
+                <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-4">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <p>จำนวนบิลที่คืนสำเร็จ</p>
+              <h2>{{return_amount}} บิล</h2>
+
+
+            </div>
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+              </svg>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-4">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <p>จำนวนรวมทั้งหมด</p>
+              <h2>{{bill_amount_sum}} บิล</h2>
+
+            </div>
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-collection" viewBox="0 0 16 16">
+                <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+        <!-- ./col -->
+
+        <div class="col-12">
+          <div class="card">
+
+            <div class="card-body">
+              <div>
+                <h3 style="text-align: center;">จำนวนบิลยืมสินค้า : {{length_p}} บิล </h3>
+                <br>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#showbill"
+                  (click)="showbill()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-card-list" viewBox="0 0 16 16">
+                    <path
+                      d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                    <path
+                      d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                  </svg>
+                  ยืม / เบิก
+                </button>
+                &nbsp;
+                <br>
+                <br>
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="example"
+                  class="table table-bordered" style="text-align: center; border-width: 2px;">
+                  <thead class="thead-dark " style="height: 50px;">
+                    <tr style="text-align: center;">
+
+                      <th scope="col" style="text-align: center;">No.</th>
+                      <th scope="col" style="text-align: center;">ชื่อผู้ยืม</th>
+                      <th scope="col" style="text-align: center;">วัน/เดือน/ปี | เวลาที่ยืม</th>
+                      <th scope="col" style="text-align: center;">สถานะ</th>
+                      <th scope="col" style="text-align: center;">คืน / รายละเอียดบิล / แก้ไข / ลบ</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let bill of billList; let i = index" style="text-align: center;">
+                      <th scope="row">{{ rowNumber + i +"." }}</th>
+                      <td>{{bill.nameuser}}</td>
+                      <td>{{bill.borrow_datetime}}</td>
+                      <td *ngIf="bill.Billuse == 1 || bill.Billuse == 0;  else other">{{ 'ยืม' }}</td>
+                      <ng-template #other>
+                        <td>คืนสำเร็จ</td>
+                      </ng-template>
+
+
+                      <td class="center-buttons"
+                        style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+
+                        <button class="btn btn-secondary float-end mb-3" style="margin-left: 5px;" type="button"
+                          data-bs-toggle="modal" data-bs-target="#returnbill"
+                          (click)="return(bill)"><!--(click)="returnbill(bill)"-->
+                          <!--(click)="show_bill(bill)" -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-receipt" viewBox="0 0 16 16">
+                            <path
+                              d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z" />
+                            <path
+                              d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
+                          </svg>
+
+                        </button>
+                        &nbsp;
+
+
+                        <button class="btn btn-info float-end mb-3" style="margin-left: 5px;" type="button"
+                          data-bs-toggle="modal" data-bs-target="#show_bill" (click)="view_bill(bill)">
+                          <!--(click)="show_bill(bill)" -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-card-list" viewBox="0 0 16 16">
+                            <path
+                              d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                            <path
+                              d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                          </svg>
+
+                        </button>
+                        &nbsp;
+
+                        <button class="btn btn-warning float-end mb-3" (click)="editBill(bill)"
+                          style="margin-left: 5px;" type="button" data-bs-toggle="modal" data-bs-target="#editBill">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                              d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                              d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                          </svg>
+
+                        </button>
+
+                        <button *ngIf="bill.Billuse === '1'" class="btn btn-danger float-end mb-3" (click)="clickdelete(bill)"
+                          style="margin-left: 5px;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-trash3" viewBox="0 0 16 16">
+                            <path
+                              d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                          </svg>
+
+                        </button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+
+
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+
+
+<!--รวม Modal-->
+
+<!-- Add Bill modal -->
+<div class="modal fade " id="showbill" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="text-align: center;">แบบฟอร์มยืมสินค้า</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" (click)="clear()">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="container">
+          <form [formGroup]="billDetail">
+            <div class="row">
+
+              <div class="col-4">
+                <label for="bill_no" class="form-label">รหัสบิล:</label>
+                <input type="text" class="form-control" name="bill_no" id="bill_no" formControlName="bill_no" readonly>
+              </div>
+
+              <div class="col-4">
+                <label for="nameuser">ชื่อผู้ยืม:</label>
+                <input type="text" class="form-control" name="nameuser" id="nameuser" formControlName="nameuser"
+                  readonly>
+              </div>
+
+              <div class="col-4">
+                <label for="borrow_datetime" class="form-label">ปี /เดือน / วันที่ | เวลาที่ยืม: </label>
+                <input type="text" class="form-control" name="borrow_datetime" id="borrow_datetime"
+                  formControlName="borrow_datetime" readonly>
+              </div>
+
+
+            </div>
+
+
+
+            <div class="row-12 mt-3">
+
+              <label for="project">โปรเจค / ลูกค้า:</label>
+              <input class="form-control mb-3" placeholder="project" name="project" id="project"
+                formControlName="project" type="text" required>
+
+            </div>
+
+
+
+            <div class="row-12">
+
+              <label for="barcode">สแกน Barcode:</label>
+              <input type="text" class="form-control" (keyup.enter)="okbarcode($event)" autofocus />
+              <p>barcode: {{ barcode }}</p>
+
+              <table class="display table table-bordered table-responsive-sm"
+                style="text-align: center; border-width: 2px;">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">รหัสสินค้า</th>
+                    <th scope="col">ชื่อสินค้า</th>
+                    <th scope="col">ยี่ห้อ</th>
+                    <th scope="col">รุ่น</th>
+                    <th scope="col">จำนวนที่ยืม</th>
+                    <th scope="col">ลบ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let bill of billObj.product_bill; let i = index ">
+                    <th scope="row">{{ rowNumber + i +"." }}</th>
+                    <td>{{ bill.product_no }}</td>
+                    <td>{{ bill.product_name }}</td>
+                    <td>{{ bill.brand }}</td>
+                    <td>{{ bill.model }}</td>
+                    <td>
+
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-dash-circle-fill" viewBox="0 0 16 16" style="color: red;"
+                        (click)="reduceAmount(i)">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                      </svg>
+
+
+                      {{ bill.amount }}
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus-circle-fill" viewBox="0 0 16 16" style="color: green;" (click)="addAmount(i)">
+                        <path
+                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                      </svg>
+
+
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-outline-danger" (click)="delete_productbill(i)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                          <path
+                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="addBill()"
+                (click)=" clear()" data-dismiss="modal">ตกลง
+              </button>
+
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Edit Bill  modal -->
+<div class="modal fade" id="editBill" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">แก้ไขบิล</h5>
+        <svg class="h-8 w-8 text-red-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" data-bs-dismiss="modal"
+          aria-label="Close"><!--(click)="clear()"-->
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form [formGroup]="billDetail">
+            <div class="row">
+
+              <div class="col-4">
+                <label for="bill_no" class="form-label">รหัสบิล:</label>
+                <input type="text" class="form-control" name="bill_no" id="bill_no" formControlName="bill_no" readonly>
+              </div>
+
+              <div class="col-4">
+                <label for="nameuser">ชื่อผู้ยืม:</label>
+                <input type="text" class="form-control" name="nameuser" id="nameuser" formControlName="nameuser"
+                  readonly>
+              </div>
+
+              <div class="col-4">
+                <label for="borrow_datetime" class="form-label">วัน /เดือน / ปี | เวลาที่ยืม: </label>
+                <!--borrow datetime:-->
+                <input type="text" class="form-control" name="borrow_datetime" id="borrow_datetime"
+                  formControlName="borrow_datetime" readonly>
+              </div>
+
+
+            </div>
+
+
+
+            <div class="row-12 mt-3">
+
+              <label for="project">โปรเจค / ลูกค้า:</label>
+              <input type="text" formControlName="project" class="form-control" name="project" id="project">
+
+
+            </div>
+
+            <div class="row-12 mt-3">
+              <label for="barcode">สแกน Barcode แก้ไขเพิ่มเติม :</label>
+              <input type="text" class="form-control" (keyup.enter)="add_edit_barcode($event)" name="barcode"
+                id="barcode" autofocus />
+
+              <table class="display table table-bordered table-responsive-sm mt-3"
+                style="text-align: center; border-width: 2px;">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">รหัสสินค้า</th>
+                    <th scope="col">ชื่อสินค้า</th>
+                    <th scope="col">ยี่ห้อ</th>
+                    <th scope="col">รุ่น</th>
+                    <th scope="col">จำนวนที่ยืม</th>
+                    <th scope="col">ลบ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let bill of product_billEdit; let i = index">
+
+                    <th scope="row">{{ rowNumber + i +"." }}</th>
+
+                    <td>{{ bill.product_no }}</td>
+                    <td>{{ bill.product_name }}</td>
+                    <td>{{ bill.brand }}</td>
+                    <td>{{ bill.model }}</td>
+                    <td>
+
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-dash-circle-fill" viewBox="0 0 16 16" style="color: red;"
+                        (click)="ed_reduceAmount(i)">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                      </svg>
+
+                      {{ bill.amount }}
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus-circle-fill" viewBox="0 0 16 16" style="color: green;"
+                        (click)="ed_addAmount(i)">
+                        <path
+                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                      </svg>
+
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-outline-danger" (click)="ed_delete_productbill(i)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                          class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                          <path
+                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" (click)="updateBill()"
+                data-bs-dismiss="modal">ยืนยันการแก้ไข
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- returnbill -->
+<div class="modal fade" id="returnbill" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">คืนบิล</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form [formGroup]="returnbill1">
+            <div class="row">
+
+              <div class="col-4">
+                <label for="bill_no" class="form-label">รหัสบิล:</label>
+                <input type="text" class="form-control" name="bill_no" id="bill_no" formControlName="bill_no" readonly>
+              </div>
+
+              <div class="col-4">
+                <label for="nameuser">ชื่อผู้ยืม:</label>
+                <input type="text" class="form-control" name="nameuser" id="nameuser" formControlName="nameuser"
+                  readonly>
+              </div>
+
+              <div class="col-4">
+                <label for="borrow_datetime" class="form-label">ปี /เดือน / วันที่ | เวลาที่ยืม: </label>
+                <!--borrow datetime:-->
+                <input type="text" class="form-control" name="borrow_datetime" id="borrow_datetime"
+                  formControlName="borrow_datetime" readonly>
+              </div>
+
+
+            </div>
+
+
+
+            <div class="row-12 mt-3">
+
+              <label for="project">โปรเจค / ลูกค้า:</label>
+              <input type="text" formControlName="project" class="form-control" name="project" id="project">
+
+
+            </div>
+
+            <div class="row-12 mt-3">
+              <label for="details">รายละเอียด:</label>
+              <textarea class="form-control" type="text" id="details" name="details" formControlName="details"
+                rows="3"></textarea>
+
+              <!-- <input type="text" formControlName="details" class="form-control" name="details" id="details"  rows="3"> -->
+            </div>
+
+            <div class="row-12 mt-3">
+              <label for="barcode">สแกน Barcode แก้ไขเพิ่มเติม :</label>
+              <input type="text" class="form-control" (keyup.enter)="add_edit_barcode($event)" name="barcode"
+                id="barcode" autofocus />
+
+              <table class="display table table-bordered table-responsive-sm mt-3"
+                style="text-align: center; border-width: 2px;">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">รหัสสินค้า</th>
+                    <th scope="col">ชื่อสินค้า</th>
+                    <th scope="col">ยี่ห้อ</th>
+                    <th scope="col">รุ่น</th>
+                    <th scope="col">จำนวนที่ยืม</th>
+                    <th scope="col">จำนวนที่คืน</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let bill of product_billEdit; let i = index">
+
+                    <th scope="row">{{ rowNumber + i +"." }}</th>
+
+                    <td>{{ bill.product_no }}</td>
+                    <td>{{ bill.product_name }}</td>
+                    <td>{{ bill.brand }}</td>
+                    <td>{{ bill.model }}</td>
+                    <td>
+
+
+                      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-dash-circle-fill" viewBox="0 0 16 16" style="color: red;"
+                        (click)="ed_reduceAmount(i)">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                      </svg> -->
+
+                      {{ bill.amount }}
+
+                      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus-circle-fill" viewBox="0 0 16 16" style="color: green;"
+                        (click)="ed_addAmount(i)">
+                        <path
+                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                      </svg> -->
+
+                    </td>
+
+                    <td>
+
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-dash-circle-fill" viewBox="0 0 16 16" style="color: red;"
+                        (click)="return_reduceAmount(i)">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                      </svg>
+
+                      {{bill.amount_return}}
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus-circle-fill" viewBox="0 0 16 16" style="color: green;"
+                        (click)="return_addAmount(i)">
+                        <path
+                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                      </svg>
+
+                    </td>
+
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+        <button type="button" class="btn btn-primary" (click)="ok_return_bill()" data-bs-dismiss="modal"
+          aria-label="Close">คืนบิล</button> <!--(click)="ok_return_bill()"-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--โชรายละเอียดบิล-->
+<div class="modal fade bd-example-modal-lg" *ngIf="viewdata" id="show_bill" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;"></h5>
+        <svg class="h-8 w-8 text-red-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" data-bs-dismiss="modal"
+          aria-label="Close"><!--(click)="clear()"-->
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </div>
+      <div class="modal-body">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+          integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="invoice-title">
+                    <h5 class="float-end font-size-15">รหัสบิล: {{viewdata.bill_no}}
+                      <!--
+                  <span
+                    class="badge bg-success font-size-12 ms-2">---</span>
+                    -->
+                    </h5>
+                    <br>
+                    <div class="mb-4">
+                      <h6 class="mb-1 text-black">รายละเอียดการยืมสินค้า</h6>
+                    </div>
+                    <!--
+                <div class="text-muted">
+                  <p class="mb-1">3184 Spruce Drive Pittsburgh, PA 15201</p>
+                  <p class="mb-1"><i class="uil uil-envelope-alt me-1"></i> xyz@987.com</p>
+                  <p><i class="uil uil-phone me-1"></i> 012-345-6789</p>
+                </div>
+                -->
+                  </div>
+
+                  <hr class="my-4">
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="text-muted">
+                        <h6 class="font-size-16 mb-3 text-dark">ยืมโดย:</h6>
+                        <h6 class="font-size-15 mb-2">{{viewdata.nameuser}}</h6>
+                      </div>
+
+                      <div class="mt-4">
+                        <h6 class="font-size-15 mb-1 text-dark">โปรเจค / ลูกค้า:</h6>
+                        <p>{{viewdata.project}}</p>
+                      </div>
+
+                    </div>
+                    <!-- end col -->
+                    <div class="col-sm-6">
+                      <div class="text-muted text-sm-end">
+
+                        <div class="mt-4">
+                          <h6 class="font-size-15 mb-1 text-dark">ปี / เดือน / วันที่ | เวลาที่ยืม</h6>
+                          <p>{{viewdata.borrow_datetime}}</p>
+                        </div>
+                        <!-- <div class="mt-4">
+                              <h6 class="font-size-15 mb-1 text-dark">เวลาที่ยืม:</h6>
+                              <p>{{viewdata.timebill}}</p>
+                            </div> -->
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="py-2">
+                    <h6 class="font-size-15">สินค้าทั้งหมดที่ทำการยืม</h6>
+
+                    <div class="table-responsive">
+                      <!--ตารางเเสดงผลสินค้าที่ทำการยืม-->
+                      <table class="table table-bordered">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th style="width: 70px; text-align: center;">No.</th>
+                            <th style="text-align: center;">รหัสสินค้า</th>
+                            <th style="text-align: center;">ชื่อสินค้า</th>
+                            <th style="text-align: center;">ยี่ห้อ</th>
+                            <th style="text-align: center;">รุ่น</th>
+                            <th class="text-end" style="width: 120px; text-align: center;">จำนวนที่ยืม</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let product of viewdata.product_bill let i = index">
+                            <th scope="row" style="text-align: center;">{{ rowNumber + i +"."}}</th>
+                            <td>
+                              <div>
+                                <h6 class="text-truncate  mb-1" style="text-align: center;">{{
+                                  product.product_no }}</h6>
+
+                              </div>
+                            </td>
+                            <td style="text-align: center;">{{product.product_name}}</td>
+                            <td style="text-align: center;">{{ product.brand }}</td>
+                            <td style="text-align: center;">{{ product.model }}</td>
+                            <td class="text-end" style="text-align: center;">{{ product.amount }} ชิ้น</td>
+                          </tr>
+
+
+                          <tr>
+                            <th scope="row" colspan="5" class="border-0 text-end">สินค้าที่ทำกาารยืมทั้งสิ้น
+                            </th>
+                            <td class="border-0 text-end">
+                              <h6 class="m-0 fw-semibold">{{viewdata.total }} ชิ้น</h6>
+                            </td>
+                          </tr>
+
+
+                          <!-- end tr -->
+                        </tbody><!-- end tbody -->
+                      </table><!-- end table -->
+                    </div><!-- end table responsive -->
+                    <div class="d-print-none mt-4">
+                      <div class="float-end">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end col -->
+          </div>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">ยืนยัน</button>
+      </div>
+    </div>
+  </div>
+</div>

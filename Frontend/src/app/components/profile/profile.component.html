@@ -1,0 +1,209 @@
+<div class="wrapper">
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <!-- <h1>แก้ไขข้อมูลส่วนตัว</h1> -->
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a>หน้าหลัก</a></li>
+              <li class="breadcrumb-item active">ข้อมูลส่วนตัว</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+
+
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <!-- <img [src]="'http://localhost:9100/showimg/' + user.img" alt="" width="100" height="100" class="rounded-circle me-2" /> -->
+                  <img [src]="url" [src]="'http://localhost:9100/showimg/' + user.img" height="100" width="100"
+                    style="border-radius: 100%; border: 2px solid gray;" /><!--150-->
+                  <br>
+                  <br>
+                  <div class="center-buttons">
+
+                    <label for="picture" class="btn btn-secondary edit-profile-btn">
+                      แก้ไขรูปโปรไฟล์
+                    </label>
+                    <input type="file" #fileInput id="picture" accept="image/*" (change)="onSelect($event)"
+                      style="display:none;" />
+                  </div>
+                </div>
+
+                <h3 class="profile-username text-center">{{user.name}}</h3>
+
+                <p class="text-muted text-center">{{user.role}}</p>
+
+                <ul class="list-group list-group-unbordered mb-3">
+                  <li class="list-group-item">
+                    <b>จำนวนที่ยืม</b><a class="float-right">{{count_bill}} ครั้ง</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>จำนวนที่คืน</b><a class="float-right">{{count_return_bill}} ครั้ง</a>
+                  </li>
+                  <!-- <li class="list-group-item">
+                    <b>จำนวนที่ login</b><a class="float-right">---</a>
+                  </li> -->
+                </ul>
+
+                <!-- <a class="btn btn-primary btn-block"><b>Follow</b></a> -->
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+
+
+          </div>
+
+          <div class="col-md-9">
+            <div class="card">
+
+              <div class="card-header p-2">
+                <ul class="nav nav-pills">
+                  <li class="nav-item"><a class="nav-link active" href="#detail"
+                      data-toggle="tab">รายละเอียดผู้ใช้งาน</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Timeline</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#activity" data-toggle="tab">Settings</a></li>
+                </ul>
+              </div><!-- /.card-header -->
+
+
+              <div class="card-body">
+
+                <div class="tab-content">
+                  <div class="active tab-pane" id="detail">
+                    <div class="post">
+                      <form (ngSubmit)="updateUser()">
+                        <div class="form-group row">
+                          <label for="name" class="col-sm-2 col-form-label">ชื่อ-นามสกุล:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" [(ngModel)]="user.name" name="name">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="email" class="col-sm-2 col-form-label">Email :</label>
+                          <div class="col-sm-10">
+                            <input type="email" class="form-control" [(ngModel)]="user.email" name="email">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="phone" class="col-sm-2 col-form-label">เบอร์โทรศัพท์ :</label>
+                          <div class="col-sm-10">
+                            <input type="phone" class="form-control" maxlength="10" [(ngModel)]="user.phone"
+                              name="phone">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="username" class="col-sm-2 col-form-label">UserName :</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" [(ngModel)]="user.username" name="username">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="password" class="col-sm-2 col-form-label">Password :</label>
+                          <div class="col-sm-10">
+                            <input type="password" class="form-control" [(ngModel)]="user.confirmpassword"
+                              name="confirmpassword">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-success">ยืนยันการแก้ไข</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- /.tab-pane -->
+
+                  <!-- /.tab-pane -->
+
+                  <!-- <div class="tab-pane" id="settings">
+                    <form class="form-horizontal">
+                      <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputName" placeholder="Name">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Phone</label>
+                        <div class="col-sm-10">
+                          <input type="phone" class="form-control" id="inputEmail" placeholder="Phone">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="inputName2" class="col-sm-2 col-form-label">UserName</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputName2" placeholder="username">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="inputName2" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputName2" placeholder="password">
+                        </div>
+                      </div>
+
+
+                      <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div> -->
+                  <!-- /.tab-pane -->
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+
+
+
+
+</div>

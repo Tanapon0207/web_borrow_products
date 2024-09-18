@@ -1,0 +1,140 @@
+<body>
+  <div class="main" style="margin-top: -120px;">
+
+    <section class="signup">
+      <div class="container">
+        <div class="signup-content">
+          <div class="signup-form">
+            <h3 class="form-title">ลงทะเบียนผู้ใช้งาน</h3>
+            <form method="POST" class="register-form" id="register-form">
+
+              <div class="form-group">
+                <label for="name">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                  </svg>
+                </label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" placeholder="Name"
+                  [ngModelOptions]="{standalone: true}" maxlength="25" autocomplete="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                  </svg>
+                </label>
+
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" placeholder="Email"
+                  [ngModelOptions]="{standalone: true}" maxlength="25" autocomplete="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                  </svg>
+                </label>
+
+                <input type="phone" class="form-control" id="phone" name="phone" [(ngModel)]="phone" placeholder="Phone"
+                  [ngModelOptions]="{standalone: true}" maxlength="15" autocomplete="phone" required maxlength="10">
+              </div>
+
+
+              <div class="form-group">
+                <label for="username">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                  </svg>
+                </label>
+                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username"
+                  placeholder="Username" [ngModelOptions]="{standalone: true}" maxlength="15" autocomplete="username"
+                  required>
+              </div>
+
+
+              <div class="form-group">
+                <label for="password">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-key-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg>
+                </label>
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password"
+                  placeholder="Password" [ngModelOptions]="{standalone: true}" maxlength="15" autocomplete="password"
+                  required>
+              </div>
+
+
+              <div class="form-group">
+                <label for="re-pass">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                  </svg>
+                </label>
+                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword"
+                  placeholder="ConfirmPassword" [(ngModel)]="confirmpassword" [ngModelOptions]="{standalone: true}"
+                  maxlength="15" autocomplete="confirmpassword" required>
+              </div>
+
+
+
+        
+              <div class="form-group form-button">
+                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" (click)="save()">
+
+              </div>
+            </form>
+          </div>
+
+
+          <div class="signup-image">
+
+            <figure>
+              <img src="https://www.jobbkk.com/upload/employer/0E/05E/02F05E/images/192606.webp" alt="sing up image">
+            </figure>
+            <a routerLink="/login" routerLinkActive="active" style="text-decoration: none;">
+              <p style="text-align: center;">ฉันมีข้อมูลผู้ใช้เรียบร้อยเเล้ว</p>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+  </div>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+  </script>
+  <script defer=""
+    src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
+    integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
+    data-cf-beacon="{&quot;rayId&quot;:&quot;80d25bcadb1b0c8f&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.8.0&quot;,&quot;si&quot;:100}"
+    crossorigin="anonymous"></script>
+
+</body>

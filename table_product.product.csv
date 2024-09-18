@@ -1,0 +1,12 @@
+_id,barcode,product_no,model,product_name,brand,amount,picture,time_add,time_update,time_delete,Isuse
+65508a8b5f30eec78b9fa474,PR00001,PR00001,1,CPU,1,10,84448392-ebf0-312d-1299-c88345311b2e.png,2023-11-12  15:19,2023-12-06 15:42,Not Delete Porduct,1
+65508a995f30eec78b9fa475,PR00002,PR00002,2,PC,2,9,computer.png,2023-11-12  15:19,2023-11-23 15:03,Not Delete Porduct,1
+655097103c5eb9ab0c779b84,PR00004,PR00004,4,เมาส์,4,9,e8384959-ad1a-1b95-762b-2861496b886e.png,2023-11-12  16:12,2023-11-23 15:03,Not Delete Porduct,1
+6550983f3c5eb9ab0c779b85,PR00005,PR00005,5,5,5 ,10,download.jpg,2023-11-12  16:17,2023-11-23 15:03,Not Delete Porduct,1
+655098b73c5eb9ab0c779b86,PR00006,PR00006,6,6,6,7,male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.webp,2023-11-12  16:19,2023-11-17 11:30,Not Delete Porduct,1
+65517fa83c5eb9ab0c779b87,PR00007,PR00007,7,7,7,10,80101335.jpg,2023-11-13  08:45,2023-11-17 11:30,Not Delete Porduct,1
+65518a633c5eb9ab0c779b8a,PR00010,PR00010,10,10,10,10,computer.png,2023-11-13  09:30,2023-11-15 14:42,2023 - 11-15 14:51,1
+655b82944f0a7f70f54f1fe1,PR00008,PR00008,8,8,8,10,80101335.jpg,2023-11-20 23:00,2023-11-23 15:04,Not Delete Porduct,1
+655c1cf34f0a7f70f54f1fe5,PR00009,PR00009,9,9,9,9,download.jpg,2023-11-21 09:58,2023-11-23 15:04,Not Delete Porduct,1
+656ff4a4bce416cd866e7847,PR00001,PR00001,6,6,6,6,Administrator.png,2023-12-06 11:12,2023-12-06 15:45,Not Delete Porduct,1
+657034a00b2a77b76f3604f9,PR00011,PR00011,11,11,11,11,10x-featured-social-media-image-size.png,2023-12-06 15:45,Not Updated Porduct,Not Delete Porduct,1

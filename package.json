@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "angular-google-charts": "^2.2.3",
+    "apexcharts": "^3.42.0"
+  }
+}

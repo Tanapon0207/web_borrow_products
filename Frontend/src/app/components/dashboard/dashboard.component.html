@@ -1,0 +1,139 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <!-- <h1 class="m-0">Dashboard</h1> -->
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a>หน้าหลัก</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+
+
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-4 col-4">
+          <!-- small box -->
+          <div class="small-box bg-info">
+            <div class="inner">
+              <p>จำนวนสินค้าทั้งหมด</p>
+              <h2>{{amount_product}} ชิ้น</h2>
+
+            </div>
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-box2-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z" />
+              </svg>
+            </div>
+            <!-- <a routerLink="/product" class="small-box-footer">ดูรายละเอียด <i class="fas fa-arrow-circle-right"></i></a> -->
+
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-4">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <p>จำนวนสินค้ายืม /เบิก</p>
+              <h2>{{amount_bill}} บิล</h2>
+
+
+            </div>
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-card-list"
+                viewBox="0 0 16 16">
+                <path
+                  d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                <path
+                  d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+              </svg>
+
+            </div>
+            <!-- <a routerLink="/bill" class="small-box-footer">ดูรายละเอียด <i class="fas fa-arrow-circle-right"></i></a> -->
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-4">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <p>จำนวนผู้ใช้ทั้งหมด</p>
+              <h2>{{amount_user}} คน</h2>
+
+
+            </div>
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
+                class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path
+                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+              </svg>
+            </div>
+            <!-- <a routerLink="/table-user" class="small-box-footer">ดูรายละเอียด <i
+                class="fas fa-arrow-circle-right"></i></a> -->
+          </div>
+        </div>
+        <!-- ./col -->
+
+      </div>
+      <!-- /.row -->
+
+
+      <!-- Main row -->
+      <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-12 connectedSortable">
+          <!-- Custom tabs (Charts with tabs)-->
+          <div class="card">
+
+
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12" style="align-items: center; ">
+
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold" style="text-decoration: none; color:black">จำนวนสินค้าที่มีการยืม
+                  /เบิกเยอะที่สุด 5 อันดับ</h6>
+
+              </div>
+
+
+              <!--ส่วนของกราฟแสดงผล -->
+              <div id="barchart_values" style="display: flex; flex: 1; height: 400px; width: 100%;"></div>
+
+
+
+
+            </div>
+
+          </div>
+          <!-- /.card -->
+
+
+
+
+        </section>
+
+      </div>
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

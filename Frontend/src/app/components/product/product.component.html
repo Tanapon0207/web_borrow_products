@@ -1,0 +1,354 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a>หน้าหลัก</a></li>
+            <li class="breadcrumb-item active">สินค้า</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+
+
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+
+            <div class="card-body">
+
+
+              <div class="col-12 text-center mt-3">
+                <h3>จำนวนสินค้าทั้งหมด : {{ length_p }} ชิ้น</h3>
+              </div>
+
+
+
+              <div class="d-flex justify-content-center">
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-3">
+                  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="example"
+                    class="table table-bordered" style="text-align: center; border-width: 2px;">
+                    <thead class="thead-dark " style="height: 50px;">
+                      <tr style="text-align: center;">
+
+                        <th scope="col">No.</th>
+                        <th scope="col">Barcode</th>
+                        <th scope="col">รูปภาพ</th>
+                        <th scope="col">รหัสสินค้า</th>
+                        <th scope="col">ชื่อสินค้า</th>
+                        <th scope="col">ยี่ห้อ</th>
+                        <th scope="col">รุ่น</th>
+                        <th scope="col">จำนวนคงเหลือ</th>
+                        <th scope="col">เพิ่ม/แก้ไข/ลบ</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr [formGroup]="productDetail">
+                        <td class="w-4 p-4">
+                          <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-table" viewBox="0 0 16 16">
+                              <path
+                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
+                            </svg>
+                          </div>
+                        </td>
+                        <td>
+                          <input type="text" class="form-control mb-3" for="barcode" id="barcode"
+                            formControlName="barcode" readonly style="text-align: center; margin-top: 3px"
+                            [innerText]="product_data" readonly />
+                        </td>
+
+                        <td>
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModalCenter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-image-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" />
+                            </svg>
+                            เพิ่มรูปภาพ
+                          </button>
+                        </td>
+
+                        <td>
+                          <input type="text" class="form-control mb-3" for="product_no" id="product_no"
+                            formControlName="product_no" readonly style="text-align: center; margin-top: 3px"
+                            [innerText]="product_data" readonly />
+                        </td>
+
+                        <td>
+                          <input class="form-control mb-3" placeholder="product_name" for="product_name"
+                            formControlName="product_name" type="text" style="text-align: center" required />
+                        </td>
+
+                        <td>
+                          <input class="form-control mb-3" placeholder="brand" for="brand" formControlName="brand"
+                            type="text" style="text-align: center" required/>
+                        </td>
+
+                        <td>
+                          <input class="form-control mb-3" placeholder="model" for="model" formControlName="model"
+                            type="text" style="text-align: center" required/>
+                        </td>
+
+                        <td>
+                          <input class="form-control mb-3" placeholder="amount" for="amount" formControlName="amount"
+                            type="number" style="text-align: center" required/>
+                        </td>
+
+                        <td>
+                          <button type="button" class="btn btn-primary" [hidden]="isButtonHidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                              class="bi bi-plus-square-fill" viewBox="0 0 16 16" (click)="addProduct()"
+                              (click)="clear()">
+                              <path
+                                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+                            </svg>
+                            เพิ่มข้อมูล
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr *ngFor="let product of productList; let i = index" style="text-align: center">
+                        <td scope="row">{{ rowNumber + i + "." }}</td>
+                        <td>
+                          <svg [attr.id]="product.product_no"></svg>
+                          <!-- เรียกใช้ฟังก์ชัน generateBarcod() เพื่อสร้างบาร์โค้ดใน SVG -->
+                          {{ generateBarcode(product.product_no) }}
+                        </td>
+                        <!--
+                        <td>{{product.picture}}</td>
+                        -->
+                        <!-- <img src="'http://localhost:9100/' + product.picture " alt="" height="80px" /> -->
+                        <td>
+                          <img [src]="'http://localhost:9100/productimg/' + product.picture" alt="User Image"
+                            style="width: 90px; height: 70px;">
+
+                        </td><!--
+                        <td *ngFor="let item of items">
+                          <img [src]="item.imageUrl" alt="Product Image" width="100">
+                        </td>
+                        -->
+
+                        <!--<td>{{ item.fileName }}</td>-->
+
+                        <td style='word-break:keep-all'>{{ product.product_no }}</td>
+                        <td style='word-break:keep-all'>{{ product.product_name }}</td>
+                        <td style='word-break:keep-all'>{{ product.brand }}</td>
+                        <td style='word-break:break-word'>{{ product.model }}</td>
+                        <td style='word-break:keep-all'>{{ product.amount }}</td>
+
+                        <td style="align-items: center">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <button class="btn btn-warning float-end mb-3" style="margin-left: 15px"
+                                data-toggle="modal" data-target="#editProduct" (click)="editProduct(product)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                  class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                  <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                  <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="col-md-6">
+                              <button class="btn btn-danger float-end mb-3" (click)="clickdelete(product)" type="button"
+                                style="margin-left: 0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                  class="bi bi-trash3" viewBox="0 0 16 16">
+                                  <path
+                                    d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- เพิ่มรูปภาพ -->
+
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-image-fill" viewBox="0 0 16 16">
+                            <path
+                              d="M.002 3a2 2 0 0 1 2-2h12 a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" />
+                          </svg>
+                          เพิ่มรูปภาพ
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div style="text-align: center">
+                            <img [src]="url" class="preview" style="
+                                border: 1px solid #000;
+                                width: 100%;
+                                height: auto;
+                                width: 200px;
+                                height: 200px;
+                              " />
+                          </div>
+                          <div class="col-8">
+                            <br />
+                            <label class="btn btn-default p-0">
+                              <input type="file" accept="image/*" id="picture" name="picture" multiple
+                                (change)="onSelect($event)" />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                          ยกเลิก
+                        </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveimg()">
+                          ยืนยัน
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <!-- Edit product modal -->
+                <div class="modal fade  bd-example-modal-lg" id="editProduct" tabindex="-1"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          แก้ไขรายละเอียดของสินค้า
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="clear_edit()">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                      <div class="modal-body">
+                        <form [formGroup]="productDetail1">
+
+                          <div class="row">
+                            <div class="col-12">
+
+                              <div class="row">
+
+                                <div class="col-6 mb-3">
+                                  <header>แก้ไฟล์ภาพของคุณ :</header>
+                                  <br>
+
+
+                                  <img [src]="url" [src]="'http://localhost:9100/productimg/' + productDetail1.get('picture')?.value"
+                                    height="150px" width="150px"
+                                    style=" border: 2px solid gray;" /><!--[src]="'http://localhost:9100/showimg/' + userDetail.get('picture')?.value"-->
+
+
+                                    <label for="picture" class="btn btn-secondary edit-profile-btn">
+                                      แก้ไขรูปสินค้า
+                                    </label>
+                                    <input type="file" #fileInput id="picture" accept="image/*" (change)="onSelect($event)"
+                                        style="display:none;"/>
+
+                                </div>
+
+
+
+                                <div class="col-6 mb-3">
+                                  <label for="product_no" class="form-label">รหัสสินค้า</label>
+                                  <input type="text" class="form-control" name="product_no" formControlName="product_no"
+                                    readonly>
+                                </div>
+
+                                <div class="col-6 mb-3">
+                                  <label for="product_name" class="form-label">ชื่อสินค้า</label>
+                                  <input type="text" class="form-control" name="product_name"
+                                    formControlName="product_name">
+                                </div>
+
+                                <div class="col-6 mb-3">
+                                  <label for="brand" class="form-label">ยี่ห้อ</label>
+                                  <input type="text" class="form-control" name="brand" formControlName="brand">
+                                </div>
+
+
+                                <div class="col-6 mb-3">
+                                  <label for="model" class="form-label">รุ่น</label>
+                                  <input type="text" class="form-control" name="model" formControlName="model">
+                                </div>
+
+                                <div class="col-6 mb-3">
+                                  <label for="amount" class="form-label">จำนวนคงเหลือ</label>
+                                  <input type="number" class="form-control" name="amount" formControlName="amount">
+                                </div>
+
+
+
+                              </div>
+
+                            </div>
+
+
+
+
+
+
+                          </div>
+
+
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                              (click)="updateProduct()">ยืนยันการแก้ไข
+                            </button>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- /.card-body -->
+
+          <!-- /.card -->
+
+
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
